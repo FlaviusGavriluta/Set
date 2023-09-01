@@ -21,5 +21,24 @@ public class Main {
 
         // List the Set
         System.out.println(numbers);
+
+        // ----------------------------------------
+
+        // Create a new HashSet
+        Set<Student> students = new HashSet<>();
+
+        // Add some students
+        students.add(new Student("Luke", 16));
+        students.add(new Student("Evan", 10));
+        students.add(new Student("Jayson", 12));
+        students.add(new Student("Jonathan", 14));
+        students.add(new Student("Elizabeth", 19));
+        students.add(new Student("Levi", 21));
+
+        // Try to add a duplicate
+        students.add(new Student("Jayson", 12));
+
+        // Print the Set
+        students.stream().forEach(student -> System.out.println(student));
     }
 }
